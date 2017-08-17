@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ac5900",
+    "navigationBarTitleText": "前端情报局",
+    "navigationBarTextStyle":"#FFF",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#FAFAFA"
+  }
+}
