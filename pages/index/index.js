@@ -1,6 +1,7 @@
 //index.js
-var wemark = require('../../wemark/wemark')
 var timeago = require('../../assets/timeago.min')
+var WxParse = require('../../wxParse/wxParse.js')
+var marked = require('../../assets/marked.min.js')
 
 var APIURl = 'https://api.awesomes.cn'
 // 处理图片地址
@@ -29,19 +30,37 @@ var formatime = function (datetime) {
   return timeago().format(datetime, 'zh_CN')
 }
 
-var pageSize = 5
+var pageSize = 10
 var page = 1
 var pagetotal = 100
 
 
 // 处理单挑条新闻数据
 var formatItem = (item, self) => {
-  wemark.parse(item.con, self, {
-    // 新版小程序可自适应宽高
-    // imageWidth: wx.getSystemInfoSync().windowWidth - 40,
-    name: 'tmpcon'
-  })
-  item.con = self.data.tmpcon
+  
+  // console.log(marked(item.con))
+  let str = `
+<pre>{
+    <span class="pl-s">
+      <span class="pl-pds">"</span>scripts
+      <span class="pl-pds">"</span></span>: {
+    <span class="pl-s">
+      <span class="pl-pds">"</span>start
+      <span class="pl-pds">"</span></span>:
+    <span class="pl-s">
+      <span class="pl-pds">"</span>nuxt
+      <span class="pl-pds">"</span></span>} }
+</pre>
+`
+
+  // wemark.parse(item.con, self, {
+  //   // 新版小程序可自适应宽高
+  //   // imageWidth: wx.getSystemInfoSync().windowWidth - 40,
+  //   name: 'tmpcon'
+  // })
+  // item.con = self.data.tmpcon
+  WxParse.wxParse('article', 'md', item.con, self, 5)
+  item.con = self.data.article.nodes
   item.picture = fetchCDN(item.picture, 'news')
   item.mem.avatar = fetchCDN(item.mem.avatar, 'mem')
   item.timeago = formatime(item.created_at),
@@ -149,6 +168,14 @@ Page({
     let tmp = {}
     tmp['newss[' + index + '].comments'] = []
     this.setData(tmp)
+  },
+  // 预览图片
+  previewImage: function (e) {
+    var current = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current,
+      urls: [current]
+    })
   },
   onLoad: function () {
     loadData(this)

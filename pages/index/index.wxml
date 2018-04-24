@@ -1,14 +1,14 @@
 <!--index.wxml-->
-<import src="../../wemark/wemark.wxml"/>
+ <import src="../../wxParse/wxParse.wxml"/> 
 
 <view class="container">
-  <view class="newitem" wx:for="{{newss}}">
+  <view class="newitem" wx:for="{{newss}}" wx:key="{{item.id}}">
     <view class="timeago">
       <text> {{item.timeago}} </text>
     </view>
     <view class="inner">
-      <template is="wemark" data="{{...item.con}}"></template>
-      <image  wx:if="{{item.picture}}" style="max-width: 100%; margin: 20px 0" mode="widthFix" src="{{item.picture}}"></image>
+       <template is="wxParse" data="{{wxParseData: item.con}}"/> 
+      <image  wx:if="{{item.picture}}" style="max-width: 100%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
       <view class="author">
         <image  class="mem-tx" mode="widthFix" src="{{item.mem.avatar}}"></image>
         <view class="comment-box" wx:if="{{item.comment > 0}}">
@@ -18,7 +18,7 @@
           <view class="closeShowCom" bindtap="closeComments" data-index="{{index}}">
             <text> 收起评论 </text>
           </view>
-          <view class="comment-item" wx:for="{{item.comments}}" wx:for-item="com">
+          <view class="comment-item" wx:for="{{item.comments}}" wx:for-item="com" >
             <view class="com-left">
               <image  class="mem-tx" mode="widthFix" src="{{com.mem.avatar}}"></image>
             </view> 

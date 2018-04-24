@@ -1,8 +1,8 @@
 /**index.wxss**/
-@import '../../wemark/wemark.wxss';
+@import "/wxParse/wxParse.wxss";
 
 .newitem {
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 14px;
   box-sizing: border-box;
   display: block;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
-  box-shadow: 1px 1px 15px #DDD;
+  /* box-shadow: 1px 1px 15px #DDD; */
   border-radius: 3px;
 }
 .timeago {
