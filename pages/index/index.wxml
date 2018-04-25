@@ -3,36 +3,23 @@
 
 <view class="container">
   <view class="newitem" wx:for="{{newss}}" wx:key="{{item.id}}">
-    <view class="timeago">
-      <text> {{item.timeago}} </text>
+    <view class="item-top">
+      <view class="author">
+        <image  class="mem-tx" mode="widthFix" src="{{item.mem.avatar}}"></image>
+      </view>
+      <view class='top-right'>
+        <view class='nc'>{{item.mem.nc}}</view>
+        <view class="timeago">
+          <text> {{item.timeago}} </text>
+        </view> 
+      </view>
     </view>
     <view class="inner">
        <template is="wxParse" data="{{wxParseData: item.con}}"/> 
       <image  wx:if="{{item.picture}}" style="max-width: 100%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
-      <view class="author">
-        <image  class="mem-tx" mode="widthFix" src="{{item.mem.avatar}}"></image>
-        <view class="comment-box" wx:if="{{item.comment > 0}}">
-          <text class="comment-bage" bindtap="fetchComment" data-index="{{index}}" data-id="{{item.id}}" data-item="{{item}}">{{item.comment}} 条评论</text>
-        </view>
-        <view class="comments-wraper" wx:if="{{item.comments.length > 0}}">
-          <view class="closeShowCom" bindtap="closeComments" data-index="{{index}}">
-            <text> 收起评论 </text>
-          </view>
-          <view class="comment-item" wx:for="{{item.comments}}" wx:for-item="com" >
-            <view class="com-left">
-              <image  class="mem-tx" mode="widthFix" src="{{com.mem.avatar}}"></image>
-            </view> 
-            <view class="com-right">
-              <text class="nc">{{com.mem.nc}}</text>
-              <text class="timeago">{{com.timeago}}</text>
-              <template is="wemark" data="{{...com.con}}" ></template>
-            </view>  
-          </view>
-           <view class="closeShowCom" bindtap="closeComments" data-index="{{index}}">
-            <text> 收起评论 </text>
-          </view>
-        </view>
-      </view>
+    </view>
+    <view class="item-bottom">
+      <view class="icon icon-comment"></view>
     </view>
   </view>
   <view class="timeago">
