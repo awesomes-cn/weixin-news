@@ -54,4 +54,25 @@
 
 .item-bottom {
   padding: 50rpx;
+  display: flex;
+  color: #808E9F;
+  justify-content: space-around;
+  font-weight:bold
+}
+
+.item-bottom .icon-box .icon-text {
+  font-weight: normal;
+}
+
+.pretty-on {
+  animation: clickpretty 2s;
+}
+
+@keyframes clickpretty {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
 }

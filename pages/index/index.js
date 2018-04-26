@@ -133,41 +133,13 @@ Page({
     isLoading: false,
     hasMore: true
   },
-  //获取评论
-  fetchComment: function (event) {
-    let index = event.currentTarget.dataset.index
-    let newsID = event.currentTarget.dataset.id
-    let newsItem = event.currentTarget.dataset.item
-    if (newsItem.comments.length > 0) {
-      return
-    }
-    let self = this
-    wx.request({
-      url: APIURl + '/comment',
-      data: {
-        typ: 'NEWS',
-        idcd: newsID
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        let tmp = {}
-        let items = res.data.items
-        tmp['newss[' + index + '].comments'] = items.map(item => {
-          return formatComment(item, self)
-        })
-        self.setData(tmp)
-      }
+  // 切换点赞
+  switchFavor: function (e) {
+    let item = e.currentTarget.dataset.item
+    item.isFavor = !item.isFavor
+    this.setData({
+      item: item
     })
-  },
-
-  // 收起评论
-  closeComments: function (event) {
-    let index = event.currentTarget.dataset.index
-    let tmp = {}
-    tmp['newss[' + index + '].comments'] = []
-    this.setData(tmp)
   },
   // 预览图片
   previewImage: function (e) {

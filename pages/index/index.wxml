@@ -19,7 +19,16 @@
       <image  wx:if="{{item.picture}}" style="max-width: 100%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
     </view>
     <view class="item-bottom">
-      <view class="icon icon-comment"></view>
+      <view class="icon-box">
+        <text class="icon icon-zan-o {{item.isFavor ? 'pretty-on' : 'pretty-off'}}" data-item="{{item}}" bindtap="switchFavor"></text>
+        <text class='icon-text' wx:if="{{item.favor > 0}}">{{item.favor}}</text>
+      </view>
+      <view class='icon-box'>
+        <text class="icon icon-comment"></text>
+        <text class='icon-text' wx:if="{{item.comment > 0}}">{{item.comment}}</text>
+      </view>
+      <view class="icon icon-share"></view>
+      <view class="icon icon-star-o"></view>
     </view>
   </view>
   <view class="timeago">
