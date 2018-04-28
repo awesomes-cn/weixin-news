@@ -1,13 +1,14 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/news/index",
+    "pages/news/detail",
+    "pages/logs/logs"    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#da552f",
     "navigationBarTitleText": "前端情报局",
-    "navigationBarTextStyle":"#FFF",
+    "navigationBarTextStyle": "#FFF",
     "enablePullDownRefresh": true,
     "backgroundColor": "#FAFAFA"
   },
@@ -15,19 +16,19 @@
     "selectedColor": "#000",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/news/index",
         "text": "首页",
         "iconPath": "images/menu-home-o.png",
         "selectedIconPath": "images/menu-home.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/news/index",
         "text": "栏目",
         "iconPath": "images/menu-book-o.png",
         "selectedIconPath": "images/menu-book.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/news/index",
         "text": "我的",
         "iconPath": "images/menu-user-o.png",
         "selectedIconPath": "images/menu-user.png"

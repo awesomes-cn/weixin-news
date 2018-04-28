@@ -1,0 +1,4 @@
+
+<view class="container">
+   <news-item item="{{news}}"></news-item> 
+</view>
