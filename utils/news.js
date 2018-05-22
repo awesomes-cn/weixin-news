@@ -7,7 +7,7 @@ const format = (item, self) => {
   WxParse.wxParse('article', 'md', item.con, self, 5)
   item.con = self.data.article.nodes
   item.picture = Util.fetchCDN(item.picture, 'news')
-  item.mem.avatar = Util.fetchCDN(item.mem.avatar, 'mem')
+  item.mem.avatar = Util.fetchCDN(item.mem.avatar, 'mem', 'repo-50')
   item.timeago = Util.formatTime(item.created_at)
   return item
 }
@@ -15,18 +15,14 @@ const format = (item, self) => {
 
 // 处理单挑条新闻数据
 var formatComment = (item, self) => {
-  // wemark.parse(item.con, self, {
-  //   // 新版小程序可自适应宽高
-  //   // imageWidth: wx.getSystemInfoSync().windowWidth - 40,
-  //   name: 'tmpcon'
-  // })
   // item.con = self.data.tmpcon
-  // item.mem.avatar = fetchCDN(item.mem.avatar, 'mem')
-  // item.timeago = formatime(item.created_at)
-  // return item
+  item.mem.avatar = Util.fetchCDN(item.mem.avatar, 'mem', 'repo-50')
+  item.timeago = Util.formatTime(item.created_at)
+  return item
 }
 
 
 module.exports = {
-  format: format
+  format: format,
+  formatComment: formatComment
 }

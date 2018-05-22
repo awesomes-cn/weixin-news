@@ -1,55 +1,39 @@
-// pages/news/detail.js
+// pages/mem/index.js
 var Util = require('../../utils/util.js')
-var NewsUtil = require('../../utils/news.js')
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    news: null,
-    nid: 0,
-    comments: []
-  },
-
-  fetchData: function () {
-    let newsID = this.data.nid
-    Util.request('news/' + newsID, 'GET', {}, res => {
-      this.setData({
-        news: NewsUtil.format(res.data, this)
-      })
-    }, () => {
-      wx.stopPullDownRefresh()
-    })
-  },
-
-  fetchComments: function () {
-    Util.request('comment?typ=NEWS&idcd=' + this.data.nid, 'GET', {}, res => {
-      this.setData({
-        comments: res.data.items.map(item => {
-          return NewsUtil.formatComment(item, this)
-        })
-      })
-    })
+    mem: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      nid: options.id
+    this.fetchMem()
+  },
+
+  // 获取个人信息
+  fetchMem: function () {
+    Util.request('mem/1', 'GET', {}, res => {
+      let _mem = res.data
+      _mem.avatar = Util.fetchCDN(_mem.avatar, 'mem', 'repo-50')
+      this.setData({
+        mem: _mem
+      })
+    }, () => {
+      wx.stopPullDownRefresh()
     })
-    this.fetchData()
-    this.fetchComments()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(getApp().globalData)
+  
   },
 
   /**
@@ -84,7 +68,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    console.log('---------')
   },
 
   /**

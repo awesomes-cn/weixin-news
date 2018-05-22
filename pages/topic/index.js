@@ -1,55 +1,25 @@
-// pages/news/detail.js
-var Util = require('../../utils/util.js')
-var NewsUtil = require('../../utils/news.js')
-
+// pages/topic/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    news: null,
-    nid: 0,
-    comments: []
-  },
-
-  fetchData: function () {
-    let newsID = this.data.nid
-    Util.request('news/' + newsID, 'GET', {}, res => {
-      this.setData({
-        news: NewsUtil.format(res.data, this)
-      })
-    }, () => {
-      wx.stopPullDownRefresh()
-    })
-  },
-
-  fetchComments: function () {
-    Util.request('comment?typ=NEWS&idcd=' + this.data.nid, 'GET', {}, res => {
-      this.setData({
-        comments: res.data.items.map(item => {
-          return NewsUtil.formatComment(item, this)
-        })
-      })
-    })
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      nid: options.id
-    })
-    this.fetchData()
-    this.fetchComments()
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(getApp().globalData)
+  
   },
 
   /**

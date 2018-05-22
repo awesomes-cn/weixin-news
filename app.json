@@ -1,8 +1,11 @@
 {
   "pages": [
+    "pages/mem/index",
+    "pages/topic/index",
     "pages/news/index",
     "pages/news/detail",
-    "pages/logs/logs"    
+    "pages/logs/logs",
+    "pages/news/share"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,13 +25,13 @@
         "selectedIconPath": "images/menu-home.png"
       },
       {
-        "pagePath": "pages/news/index",
+        "pagePath": "pages/topic/index",
         "text": "栏目",
         "iconPath": "images/menu-book-o.png",
         "selectedIconPath": "images/menu-book.png"
       },
       {
-        "pagePath": "pages/news/index",
+        "pagePath": "pages/mem/index",
         "text": "我的",
         "iconPath": "images/menu-user-o.png",
         "selectedIconPath": "images/menu-user.png"

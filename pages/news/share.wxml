@@ -1,0 +1,6 @@
+<view  class="container">
+  <view class="src-box">
+    <image  wx:if="{{screenshot}}" mode="widthFix" src="{{screenshot}}" data-src="{{screenshot}}" bindtap="previewImage"></image>
+  </view>
+  <view class="tip">请保存上面的图片，手动分享到任何平台</view>
+</view>

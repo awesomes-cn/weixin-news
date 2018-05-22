@@ -2,7 +2,7 @@
 var Util = require('../../utils/util.js')
 var NewsUtil = require('../../utils/news.js')
 
-var pageSize = 10
+var pageSize = 5
 var page = 1
 var pagetotal = 100
 
@@ -15,17 +15,6 @@ Page({
     isLoading: false,
     hasMore: true
   },
-
-  // 切换点赞
-  switchFavor: function (e) {
-    let item = e.currentTarget.dataset.item
-    item.isFavor = !item.isFavor
-    this.setData({
-      item: item
-    })
-  },
-
-  
 
   // 加载数据
   fetchData: function (empty) {
@@ -64,7 +53,7 @@ Page({
   onLoad: function () {
     this.fetchData()
   },
-  
+
   // 触底
   onReachBottom: function () {
     page += 1

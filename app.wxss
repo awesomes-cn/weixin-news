@@ -1,9 +1,50 @@
 /**app.wxss**/
 @import "utils/icon.wxss";
-
-.container {
+page {
   height: 100%;
+}
+.container {
+  min-height: 100%;
   box-sizing: border-box;
   font-family: "微软雅黑";
-  background-color: #FAFAFA;
+  background-color: #f4f5f5;
 } 
+
+
+.run-loader {
+  width: 80rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #4A9EB1;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: loader-rotate 1s linear infinite;
+  transition: border-color 2s;
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0);
+    border-color: #4A9EB1;
+    border-right-color: transparent;
+  }
+  30% {
+     border-color: #4CAF50;
+     border-right-color: transparent;
+  }
+  60% {
+     border-color: #aebe14;
+     border-right-color: transparent;
+  }
+  80% {
+     border-color: #607D8B;
+     border-right-color: transparent;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: #4A9EB1;
+    border-right-color: transparent;
+  }
+}

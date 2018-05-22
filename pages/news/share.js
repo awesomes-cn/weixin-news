@@ -1,37 +1,12 @@
-// pages/news/detail.js
+// pages/news/share.js
 var Util = require('../../utils/util.js')
-var NewsUtil = require('../../utils/news.js')
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    news: null,
-    nid: 0,
-    comments: []
-  },
-
-  fetchData: function () {
-    let newsID = this.data.nid
-    Util.request('news/' + newsID, 'GET', {}, res => {
-      this.setData({
-        news: NewsUtil.format(res.data, this)
-      })
-    }, () => {
-      wx.stopPullDownRefresh()
-    })
-  },
-
-  fetchComments: function () {
-    Util.request('comment?typ=NEWS&idcd=' + this.data.nid, 'GET', {}, res => {
-      this.setData({
-        comments: res.data.items.map(item => {
-          return NewsUtil.formatComment(item, this)
-        })
-      })
-    })
+    screenshot: null
   },
 
   /**
@@ -41,15 +16,34 @@ Page({
     this.setData({
       nid: options.id
     })
-    this.fetchData()
-    this.fetchComments()
+    this.fetchScreenshot()
+  },
+
+  fetchScreenshot: function () {
+    let newsID = this.data.nid
+    Util.request('news/' + newsID + '/screenshot', 'GET', {}, res => {
+      this.setData({
+        screenshot: Util.fetchCDN(res.data, 'news/screenshot')
+      })
+    }, () => {
+      wx.stopPullDownRefresh()
+    })
+  },
+
+  // 预览图片
+  previewImage: function (e) {
+    var current = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current,
+      urls: [current]
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(getApp().globalData)
+  
   },
 
   /**

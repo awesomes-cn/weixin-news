@@ -1,0 +1,47 @@
+.mem-banner {
+  background-color: #da552f;
+  display: flex;
+  align-items: center;
+  padding: 50rpx 0;
+  flex-direction: column;
+  color: #FFF;
+}
+.mem-banner .mem-tx {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  margin-bottom: 20rpx;
+}
+
+.list-box {
+  background-color: #FFF;
+  margin-top: 30rpx;
+}
+.list-box .list-item {
+  display: flex;
+  border-bottom: #FAFAFA 1px solid;
+  padding: 35rpx 20rpx;
+  font-size: 30rpx;
+}
+
+.list-item .icon {
+  margin-right: 30rpx;
+}
+
+.list-item .icon-star {
+  color: #8BC34A
+}
+
+.list-item .icon-zan {
+  color: #03A9F4
+}
+
+.list-item .icon-comment {
+  color: #17c1b1
+}
+
+.list-item .number {
+  flex-grow: 1;
+  text-align: right;
+  color: #808E9F
+}

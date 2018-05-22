@@ -1,0 +1,7 @@
+.ready-to-come {
+  font-size: 70rpx;
+  color: #CCC;
+  font-weight: bolder;
+  text-align: center;
+  padding: 200rpx 0;
+}

@@ -1,10 +1,11 @@
 <!--index.wxml-->
 
 <view class="container">
-   <news-item  wx:for="{{newss}}" wx:key="{{item.id}}" item="{{item}}"></news-item> 
-  <!-- <news-item wx:for="{{newss}}"></news-item> -->
-  <view class="timeago">
-    <text wx:if="{{hasMore}}"> {{isLoading ? '加载中' : '加载更多'}} </text>
+ <news-item  wx:for="{{newss}}" wx:key="{{item.id}}" item="{{item}}"></news-item> 
+  <view class="loadmore">
+    
+    <!-- <text wx:if="{{hasMore}}"> {{isLoading ? '加载中' : '加载更多'}} </text> -->
+    <view wx:if="{{hasMore}}"  class='run-loader'></view>
     <text wx:else> 没有更多了 </text>
   </view>
 </view>

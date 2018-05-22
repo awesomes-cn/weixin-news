@@ -64,8 +64,12 @@
   font-weight: normal;
 }
 
-.pretty-off {
+.loadmore {
+  display: flex;
+  padding: 30px;
+  justify-content: center
 }
+
 
 @keyframes clickpretty {
   0% {

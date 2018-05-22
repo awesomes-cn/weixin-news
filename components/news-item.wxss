@@ -25,6 +25,9 @@
   padding-bottom: 0;
 }
 
+.pretty-on {
+  color: red
+}
 
 .item-top  .author {
   text-align: center;

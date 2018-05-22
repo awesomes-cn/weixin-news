@@ -1,4 +1,18 @@
 
 <view class="container">
-   <news-item item="{{news}}"></news-item> 
+   <news-item item="{{news}}"></news-item>
+   <view class="comment-box">
+      <view class='com-item' wx:for="{{comments}}" wx:key="item.id">
+          <view class="com-left">
+            <view class="author">
+              <image  class="mem-tx" mode="widthFix" src="{{item.mem.avatar}}"></image>
+            </view>
+          </view>
+          <view class="com-right">
+              <view class='nc'>{{item.mem.nc}}</view>
+              <view class="timeago">{{item.timeago}}</view>
+              <view class="com-con">{{item.con}}</view>
+          </view>
+      </view>
+   </view>
 </view>

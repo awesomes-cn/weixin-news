@@ -19,14 +19,14 @@
   </view>
   <view class="item-bottom">
     <view class="icon-box">
-      <text class="icon icon-zan-o {{item.isFavor ? 'pretty-on' : 'pretty-off'}}" data-item="{{item}}" bindtap="switchFavor"></text>
+      <text class="icon  {{item.isFavor ? 'icon-zan' : 'icon-zan-o'}}" data-item="{{item}}" bindtap="switchFavor"></text>
       <text class='icon-text' wx:if="{{item.favor > 0}}">{{item.favor}}</text>
     </view>
     <view class='icon-box'  bindtap='gotoComment'>
       <text class="icon icon-comment"></text>
       <text class='icon-text' wx:if="{{item.comment > 0}}">{{item.comment}}</text>
     </view>
-    <view class="icon icon-share"></view>
-    <view class="icon icon-star-o"></view>
+    <view class="icon icon-share"  bindtap='gotoShare'></view>
+    <view class="icon  {{item.isCollect ? 'icon-star' : 'icon-star-o'}}" data-item="{{item}}" bindtap="switchCollect" ></view>
   </view> 
  </view>  

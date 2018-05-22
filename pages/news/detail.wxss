@@ -1,1 +1,38 @@
-/* pages/news/detail.wxss */
+.comment-box {
+
+}
+
+.com-item {
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #444;
+  background-color: #FFF;
+  display: flex;
+  padding: 30rpx;
+  border-top: #F9FAF9 1px solid;
+}
+
+.com-item .com-left {
+  width: 70rpx;
+  flex-shrink: 0;
+}
+
+.com-item .nc {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.com-item .mem-tx {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%
+}
+
+.com-item .com-con {
+  margin-top: 10rpx;
+}
+
+.com-item .timeago {
+  font-size: 30rpx;
+  color: #DDD
+}
