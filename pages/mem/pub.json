@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我发布的",
+  "usingComponents": {
+    "news-item": "../../components/news-item"
+  }
+}

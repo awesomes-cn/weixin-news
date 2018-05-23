@@ -5,25 +5,27 @@
   </view>
 
   <view class="list-box">
-    <view class="list-item">
+    <navigator class="list-item" url="/pages/mem/collect">
       <text class="icon icon-star"></text>
       <text>我收藏的</text>
       <text class='number'>12</text>
-    </view>
+    </navigator>
     <view class="list-item">
       <text class="icon icon-zan"></text>
       <text>我点赞的</text>
       <text class='number'>12</text>
     </view>
-    <view class="list-item">
-      <text class="icon icon-comment"></text>
-      <text>我的评论</text>
-      <text class='number'>12</text>
-    </view>
+   
 
-    <view class="list-item">
+    <navigator class="list-item" url="/pages/mem/pub">
       <text class="icon icon-comment"></text>
       <text>我的发布</text>
+      <text class='number'>12</text>
+    </navigator>
+
+     <view class="list-item">
+      <text class="icon icon-comment"></text>
+      <text>我的评论</text>
       <text class='number'>12</text>
     </view>
   </view>
@@ -41,7 +43,8 @@
 
     <view class="list-item">
       <text class="icon icon-comment"></text>
-      <text>分享推荐</text>
+      <!-- <text>分享推荐</text> -->
+      
     </view>
   </view>
 </view>

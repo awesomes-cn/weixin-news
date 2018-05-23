@@ -1,0 +1,12 @@
+<!--index.wxml-->
+
+<view class="container">
+ <news-item  wx:for="{{newss}}" wx:key="{{item.id}}" item="{{item}}"></news-item> 
+  <view class="loadmore">
+    <!-- <text wx:if="{{hasMore}}"> {{isLoading ? '加载中' : '加载更多'}} </text> -->
+    <view wx:if="{{hasMore}}"  class='run-loader'></view>
+  </view>
+  <view class='no-item' v-if="!isLoading && newss.length < 1">
+    無
+  </view>
+</view>

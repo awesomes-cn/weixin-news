@@ -7,7 +7,7 @@ const request = (action, method, data, successHanlder, completeHanlder) => {
     data: data,
     header: {
       'content-type': 'application/json', // 默认值
-      'atoken': getApp().globalData.token
+      'atoken': (getApp().globalData.session || {}).token
     },
     method: method,
     success: successHanlder,
