@@ -9,13 +9,13 @@ Page({
    */
   data: {
     news: null,
-    nid: 0,
-    comments: []
+    nid: 270,
+    comments: [],
+    comcon: ''
   },
 
   fetchData: function () {
-    let newsID = this.data.nid
-    Util.request('news/' + newsID, 'GET', {}, res => {
+    Util.request('news/' + this.data.nid, 'GET', {}, res => {
       this.setData({
         news: NewsUtil.format(res.data, this)
       })
@@ -34,6 +34,32 @@ Page({
     })
   },
 
+  // 提交评论
+  subcomment: function (e) {
+    console.log(this.data.comcon)
+    if (this.data.comcon.trim() === '') {
+      return false
+    }
+    Util.request('comment', 'POST', {
+      typ: 'NEWS',
+      idcd: this.data.news.id,
+      con: this.data.comcon
+    }, res => {
+      let _item = NewsUtil.formatComment(res.data.item, this)
+      this.data.comments.push(_item)
+      this.setData({
+        comments: this.data.comments,
+        comcon: ''
+      })
+    })
+  },
+
+  bindinput: function (e) {
+    this.setData({
+      comcon: e.detail.value
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -49,7 +75,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(getApp().globalData)
   },
 
   /**
@@ -77,7 +102,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.fetchData()
+    this.fetchComments()
   },
 
   /**

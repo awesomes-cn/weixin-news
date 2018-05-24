@@ -57,11 +57,18 @@
 }
 
 .item-bottom {
-  padding: 50rpx;
+  /* padding: 50rpx; */
   display: flex;
   color: #808E9F;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   font-weight:bold;
+}
+
+.item-bottom view {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 50rpx 0;
 }
 
 .item-bottom .icon-box .icon-text {

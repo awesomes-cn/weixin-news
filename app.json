@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/news/index",
+    "pages/news/detail",
     "pages/mem/collect",
     "pages/mem/index",
     "pages/topic/index",
-    "pages/news/detail",
     "pages/logs/logs",
     "pages/news/share",
     "pages/mem/pub"

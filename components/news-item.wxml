@@ -18,8 +18,8 @@
     <image  wx:if="{{item.picture}}" style="max-width: 70%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
   </view>
   <view class="item-bottom">
-    <view class="icon-box">
-      <text class="icon  {{item.isFavor ? 'icon-zan' : 'icon-zan-o'}}" data-item="{{item}}" bindtap="switchFavor"></text>
+    <view class="icon-box" bindtap="switchFavor">
+      <text class="icon  {{item.isFavor ? 'icon-zan' : 'icon-zan-o'}}" data-item="{{item}}" ></text>
       <text class='icon-text' wx:if="{{item.favor > 0}}">{{item.favor}}</text>
     </view>
     <view class='icon-box'  bindtap='gotoComment'>

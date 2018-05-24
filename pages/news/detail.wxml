@@ -1,6 +1,12 @@
 
 <view class="container">
    <news-item item="{{news}}"></news-item>
+   <view class="comment-editor">
+     <textarea  placeholder="我来讲两句"  maxlength="500" auto-height cursor-spacing="15" confirm-type="发送" value="{{comcon}}" bindinput="bindinput"/>
+     <view class="btn" bindtap='subcomment'>
+        <text class="icon icon-send"></text>
+     </view>
+   </view>
    <view class="comment-box">
       <view class='com-item' wx:for="{{comments}}" wx:key="item.id">
           <view class="com-left">
