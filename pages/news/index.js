@@ -33,13 +33,15 @@ Page({
       skip: pageSize * (page - 1)
     }, res => {
       let items = res.data.items.map(item => {
+        item.con = '非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。非常抱歉地通知大家，前端情报局目前阶段已不再维护，请各位同学将收藏或喜欢的情报通过自己的方式保存下来，目前是支持访问的，只是停止更新。'
         return NewsUtil.format(item, this)
       })
       let arr = (empty ? [] : this.data.newss)
       arr = (empty ? [] : this.data.newss).concat(items)
       pagetotal = res.data.count
+      let aritem = arr[0]
       this.setData({
-        newss: arr,
+        newss: aritem,
         hasMore: pagetotal > pageSize * page
       })
     }, () => {
@@ -56,8 +58,8 @@ Page({
 
   // 触底
   onReachBottom: function () {
-    page += 1
-    this.fetchData()
+    // page += 1
+    // this.fetchData()
   },
 
   // 下拉刷新

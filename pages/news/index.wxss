@@ -1,2 +1,10 @@
 /**index.wxss**/
 @import "/wxParse/wxParse.wxss";
+
+.card-box {
+  /* margin: 0 50rpx;
+  background-color: #FFF;
+  border-radius: 10rpx;
+  box-shadow: 0px 0px 50rpx #DDD;
+  border: #e3e5e7 1px solid; */
+}

@@ -4,19 +4,34 @@
 
 .newitem {
   /* padding: 20px; */
-  font-size: 14px;
+  font-size: 38rpx;
   box-sizing: border-box;
   display: block;
   color: #444;
   margin-bottom: 30rpx;
+  height: 100%;
+  /* background-color: #FFF; */
+  margin: 0 50rpx;
   background-color: #FFF;
+  border-radius: 10rpx;
+  box-shadow: 0px 0px 50rpx #DDD;
+  /* border: #e3e5e7 1px solid; */
 }
 
-.newitem .inner {
-  padding: 0 50rpx;
+.newitem .item-body {
+  padding: 50rpx 50rpx;
   box-sizing: border-box;
   display: block;
-  width: 100%;
+  color: #555;
+  overflow-y: auto;
+  position: fixed;
+  top: 100rpx;
+  bottom: 100rpx;
+  left: 50rpx;
+  right: 50rpx;
+  background-color: #FFF;
+  box-shadow: 0px 0px 50rpx #DDD;
+  border: #e3e5e7 1px solid;
   /* box-shadow: 1px 1px 15px #DDD; */
 }
 .item-top {
@@ -71,6 +86,74 @@
   padding: 50rpx 0;
 }
 
+.item-head {
+  padding: 0 50rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: #EEE 1px solid;
+  font-size: 30rpx;
+  position: fixed;
+  z-index: 100;
+  background-color: #FAFAFA;
+  left: 50rpx;
+  right: 50rpx;
+  top: 0rpx;
+  box-shadow: 0px 0px 50rpx #DDD;
+  border: #e3e5e7 1px solid;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  font-weight: bold
+}
+
+.item-head .item-title {
+  margin-top: 15rpx;
+  color: #888;
+  font-size: 40rpx;
+}
+
 .item-bottom .icon-box .icon-text {
   font-weight: normal;
+}
+
+
+.item-operbox {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 10rpx;
+  left: 50rpx;
+  right: 50rpx;
+  box-shadow: 0px 0px 50rpx #DDD;
+  border: #e3e5e7 1px solid;
+  background-color: #FFF;
+  border-top: 0;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.oper-btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5rpx;
+  font-size: 25rpx;
+}
+
+.oper-btn text {
+  display: inline-block;
+  padding:10rpx 20rpx;
+  border: 1px solid rgba(27,31,35,0.2);
+}
+.oper-btn .oper-action {
+  background-color: #eff3f6;
+  background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+  border-top-left-radius: 5rpx;
+  border-bottom-left-radius: 5rpx;
+}
+
+.oper-btn .oper-num {
+  border-left: 0;
+  border-top-right-radius: 5rpx;
+  border-bottom-right-radius: 5rpx;
 }

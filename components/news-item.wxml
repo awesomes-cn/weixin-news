@@ -1,23 +1,16 @@
 <!--components/news-item.wxml-->
    <import src="../wxParse/wxParse.wxml"/>  
 
-  <view class="newitem" wx:if="{{item}}"> 
-   <view class="item-top">
-    <view class="author">
-      <image  class="mem-tx" mode="widthFix" src="{{item.mem.avatar}}"></image>
-    </view>
-    <view class='top-right'>
-      <view class='nc'>{{item.mem.nc}}</view>
-      <view class="timeago">
-        <text> {{item.timeago}} </text>
-      </view> 
-    </view>
+<view class="newitem" wx:if="{{item}}"> 
+  <view class='item-head'>
+    <text>第 2018-07-04 期</text>
+    <!-- <view class='item-title'>forEach 的参数详解</view> -->
   </view>
-  <view class="inner">
+  <view class="item-body">
     <template is="wxParse" data="{{wxParseData: item.con}}"/> 
     <image  wx:if="{{item.picture}}" style="max-width: 70%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
   </view>
-  <view class="item-bottom">
+  <!-- <view class="item-bottom">
     <view class="icon-box" bindtap="switchFavor">
       <text class="icon  {{item.isFavor ? 'icon-zan' : 'icon-zan-o'}}" data-item="{{item}}" ></text>
       <text class='icon-text' wx:if="{{item.favor > 0}}">{{item.favor}}</text>
@@ -28,5 +21,20 @@
     </view>
     <view class="icon icon-share"  bindtap='gotoShare'></view>
     <view class="icon  {{item.isCollect ? 'icon-star' : 'icon-star-o'}}" data-item="{{item}}" bindtap="switchCollect" ></view>
-  </view> 
- </view>  
+  </view>  -->
+
+  <view class='item-operbox'>
+    <view class='oper-btn'>
+      <text class='oper-action'>有用</text>
+      <text class='oper-num'>10</text>
+    </view>
+    <view class='oper-btn'>
+      <text class='oper-action'>讨论</text>
+      <text class='oper-num'>10</text>
+    </view>
+    <view class='oper-btn'>
+      <text class='oper-action'>收藏</text>
+      <text class='oper-num'>1000</text>
+    </view>
+  </view>
+</view>  

@@ -11,11 +11,11 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#da552f",
-    "navigationBarTitleText": "前端情报局",
-    "navigationBarTextStyle": "#FFF",
-    "enablePullDownRefresh": true,
-    "backgroundColor": "#FAFAFA"
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "前端加油卡",
+    "navigationBarTextStyle": "red",
+    "backgroundColor": "#FAFAFA",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "selectedColor": "#000",
@@ -28,7 +28,7 @@
       },
       {
         "pagePath": "pages/topic/index",
-        "text": "栏目",
+        "text": "往期",
         "iconPath": "images/menu-book-o.png",
         "selectedIconPath": "images/menu-book.png"
       },

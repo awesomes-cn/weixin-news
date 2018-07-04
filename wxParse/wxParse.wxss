@@ -14,13 +14,13 @@
     margin: 0 5px;
     font-family: Helvetica,sans-serif;
     font-size: 28rpx;
-    color: #333;
+    /* color: #333; */
     line-height: 1.8;
 }
 
 .wxParse-p {
   line-height: 30px;
-  color: #333;
+  /* color: #333; */
 }
 view{
     word-break:break-all; overflow:auto;
