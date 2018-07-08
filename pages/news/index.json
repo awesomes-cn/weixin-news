@@ -1,4 +1,5 @@
 {
+  "navigationBarTextStyle": "black",
   "usingComponents": {
     "news-item": "../../components/news-item"
   }

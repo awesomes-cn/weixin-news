@@ -4,46 +4,53 @@
     <text>{{mem.nc}}</text>
   </view>
 
-  <view class="list-box">
+  <!-- <view class='mem-navs'>
+    <view>
+      <view class='nav-nm'>收藏</view>
+      <view>10</view>
+    </view>
+    <view>
+      <view>有用</view>
+      <view>10</view>
+    </view>
+    <view>
+      <view>评论</view>
+      <view>10</view>
+    </view>
+  </view> -->
+
+   <view class="list-box">
     <navigator class="list-item" url="/pages/mem/collect">
-      <text class="icon icon-star"></text>
+      <!-- <text class="icon icon-star"></text> -->
       <text>我收藏的</text>
       <text class='number'>12</text>
     </navigator>
     <view class="list-item">
-      <text class="icon icon-zan"></text>
-      <text>我点赞的</text>
+      <!-- <text class="icon icon-zan"></text> -->
+      <text>我觉得有用的</text>
       <text class='number'>12</text>
     </view>
-   
-
-    <navigator class="list-item" url="/pages/mem/pub">
-      <text class="icon icon-comment"></text>
-      <text>我的发布</text>
-      <text class='number'>12</text>
-    </navigator>
-
      <view class="list-item">
-      <text class="icon icon-comment"></text>
+      <!-- <text class="icon icon-comment"></text> -->
       <text>我的评论</text>
       <text class='number'>12</text>
     </view>
-  </view>
+  </view> 
 
   <view class="list-box">
     <view class="list-item">
-      <text class="icon icon-comment"></text>
-      <text>个人设置</text>
+      <!-- <text class="icon icon-comment"></text> -->
+      <text>关于</text>
     </view>
 
     <view class="list-item">
-      <text class="icon icon-comment"></text>
+      <!-- <text class="icon icon-comment"></text> -->
       <text open-type="contact">帮助反馈</text>
     </view>
 
     <view class="list-item">
-      <text class="icon icon-comment"></text>
-      <!-- <text>分享推荐</text> -->
+      <!-- <text class="icon icon-comment"></text> -->
+      <text>分享推荐</text>
       
     </view>
   </view>

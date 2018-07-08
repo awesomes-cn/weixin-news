@@ -4,6 +4,7 @@
 <view class="newitem" wx:if="{{item}}"> 
   <view class='item-head'>
     <text>第 2018-07-04 期</text>
+     <text class='icon icon-star-o'></text>
     <!-- <view class='item-title'>forEach 的参数详解</view> -->
   </view>
   <view class="item-body">
@@ -25,16 +26,22 @@
 
   <view class='item-operbox'>
     <view class='oper-btn'>
-      <text class='oper-action'>有用</text>
-      <text class='oper-num'>10</text>
+      <view class='oper-action'>
+         <text class="icon icon-zan-o"></text>
+         <text>有用</text>
+      </view>
+      <view class='oper-num'>34</view>
     </view>
     <view class='oper-btn'>
-      <text class='oper-action'>讨论</text>
-      <text class='oper-num'>10</text>
+      <view class='oper-action'>
+         <text class="icon icon-comment"></text>
+         <text>讨论</text>
+      </view>
+      <view class='oper-num'>10</view>
     </view>
-    <view class='oper-btn'>
+    <!-- <view class='oper-btn'>
       <text class='oper-action'>收藏</text>
       <text class='oper-num'>1000</text>
-    </view>
+    </view> -->
   </view>
 </view>  

@@ -1,21 +1,21 @@
 {
   "pages": [
     "pages/news/index",
-    "pages/news/detail",
-    "pages/mem/collect",
     "pages/mem/index",
     "pages/topic/index",
+    "pages/news/detail",
+    "pages/mem/collect",
     "pages/logs/logs",
     "pages/news/share",
     "pages/mem/pub"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#FAFAFA",
     "navigationBarTitleText": "前端加油卡",
-    "navigationBarTextStyle": "red",
     "backgroundColor": "#FAFAFA",
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "selectedColor": "#000",

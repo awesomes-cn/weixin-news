@@ -5,7 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    topics: [
+      {
+        title: "map 详细用法",
+        show_at: "2018-04-05"
+      }, {
+        title: "给 JSON 加注释",
+        show_at: "2018-04-06"
+      }, {
+        title: "退出 forEach 循环体",
+        show_at: "2018-04-07"
+      }, {
+        title: "快死去重数组",
+        show_at: "2018-04-09"
+      }
+    ]
   },
 
   /**
