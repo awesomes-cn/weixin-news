@@ -4,14 +4,14 @@
 
 .newitem {
   /* padding: 20px; */
-  font-size: 38rpx;
+  /* font-size: 30rpx; */
   box-sizing: border-box;
   display: block;
   color: #444;
   margin-bottom: 30rpx;
   height: 100%;
   /* background-color: #FFF; */
-  margin: 0 50rpx;
+  /* margin: 0 50rpx; */
   background-color: #FFF;
   border-radius: 10rpx;
   box-shadow: 0px 0px 50rpx #DDD;
@@ -27,13 +27,19 @@
   position: fixed;
   top: 100rpx;
   bottom: 100rpx;
-  left: 50rpx;
-  right: 50rpx;
+  left: 20rpx;
+  right: 20rpx;
   background-color: #FFF;
   box-shadow: 0px 0px 50rpx #DDD;
   border: #e3e5e7 1px solid;
   border-bottom: 0;
   /* box-shadow: 1px 1px 15px #DDD; */
+}
+
+.item-title {
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
 }
 .item-top {
   display: flex;
@@ -97,8 +103,8 @@
   position: fixed;
   z-index: 100;
   background-color: #FAFAFA;
-  left: 50rpx;
-  right: 50rpx;
+  left: 20rpx;
+  right: 20rpx;
   top: 0rpx;
   box-shadow: 0px 0px 50rpx #DDD;
   border: #e3e5e7 1px solid;
@@ -124,8 +130,8 @@
   display: flex;
   position: fixed;
   bottom: 10rpx;
-  left: 50rpx;
-  right: 50rpx;
+  left: 20rpx;
+  right: 20rpx;
   box-shadow: 0px 0px 50rpx #DDD;
   border: #e3e5e7 1px solid;
   background-color: #FFF;

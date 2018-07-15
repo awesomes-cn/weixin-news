@@ -3,12 +3,13 @@
 
 <view class="newitem" wx:if="{{item}}"> 
   <view class='item-head'>
-    <text>第 2018-07-04 期</text>
+    <text>第 {{item.show_at}} 期</text>
      <text class='icon icon-star-o'></text>
     <!-- <view class='item-title'>forEach 的参数详解</view> -->
   </view>
   <view class="item-body">
-    <template is="wxParse" data="{{wxParseData: item.con}}"/> 
+    <view class="item-title">{{item.title}}</view>
+    <template is="wxParse" data="{{wxParseData: item.content}}"/> 
     <image  wx:if="{{item.picture}}" style="max-width: 70%; margin: 20px 0" mode="widthFix" src="{{item.picture}}" data-src="{{item.picture}}" bindtap="previewImage"></image>
   </view>
   <!-- <view class="item-bottom">
