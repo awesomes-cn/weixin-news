@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/topic/index",
     "pages/news/index",
     "pages/mem/index",
-    "pages/topic/index",
     "pages/news/detail",
     "pages/mem/collect",
     "pages/logs/logs",
     "pages/news/share",
-    "pages/mem/pub"
+    "pages/mem/pub",
+    "pages/topic/detail"
   ],
   "window": {
     "backgroundTextStyle": "black",

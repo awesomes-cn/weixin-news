@@ -6,7 +6,9 @@ var NewsUtil = require('../../utils/news.js')
 var app = getApp()
 Page({
   data: {
-    topics: {},
+    newss: {},
+    tmpcon: {},
+    tid: 0,
     isLoading: false,
     hasMore: true
   },
@@ -18,10 +20,12 @@ Page({
     }
     this.setData({ isLoading: true })
 
-    Util.request('topic', 'GET', {
+    Util.request('topic/' + this.data.tid, 'GET', {
     }, res => {
+      let aritem = NewsUtil.format(res.data.data[0], this)
+
       this.setData({
-        topics: res.data.data
+        newss: aritem
       })
     }, () => {
       this.setData({
@@ -31,7 +35,10 @@ Page({
     })
   },
 
-  onLoad: function () {
+  onLoad: function (options) {
+    this.setData({
+      tid: options.id
+    })
     this.fetchData()
   },
 

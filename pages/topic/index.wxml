@@ -1,10 +1,10 @@
 <view class="container">
   <view class='topic-box'>
-    <view class='topic-item' wx:for="{{topics}}">
+    <navigator url="/pages/topic/detail?id={{item.id}}" class='topic-item' wx:for="{{topics}}">
       <view>
         <view class='item-date'>第 {{item.show_at}} 期</view>
         <view>{{item.title}}</view>
       </view>
-    </view>
+    </navigator>
   </view>
 </view>

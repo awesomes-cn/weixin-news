@@ -31,14 +31,14 @@
          <text class="icon icon-zan-o"></text>
          <text>有用</text>
       </view>
-      <view class='oper-num'>34</view>
+      <view class='oper-num'>{{item.zan}}</view>
     </view>
     <view class='oper-btn'>
       <view class='oper-action'>
          <text class="icon icon-comment"></text>
          <text>讨论</text>
       </view>
-      <view class='oper-num'>10</view>
+      <view class='oper-num'>{{item.comment}}</view>
     </view>
     <!-- <view class='oper-btn'>
       <text class='oper-action'>收藏</text>

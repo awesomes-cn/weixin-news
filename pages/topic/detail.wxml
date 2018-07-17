@@ -1,0 +1,7 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class='card-box'>
+    <news-item item="{{newss}}"></news-item> 
+  </view>
+</view>
